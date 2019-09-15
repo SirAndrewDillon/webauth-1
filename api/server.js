@@ -36,7 +36,7 @@ server.use('/api/auth', authRouter)
 server.use('/api/users', usersRouter)
 
 server.get('/', (req, res) => {
-	res.json({ api: 'up', session: req.session })
+	res.json({ api: 'up,up and away', session: req.session })
 })
 
 module.exports = server
