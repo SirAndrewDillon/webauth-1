@@ -2,7 +2,7 @@
 
 # Overview
 
-This repository holds all backend files for the FoodieFun application. You can find it deployed [here](https://foodiefun-api.herokuapp.com/api/).
+This repository holds all backend files for the Authentication Project. You can find it deployed [here](http://localhost:4949/api/).
 
 ## TECH USED
 
@@ -10,9 +10,8 @@ This repository holds all backend files for the FoodieFun application. You can f
 - Express
 - Helmet & Cors
 - Knex
-- SQLite3 (development)
-- MySQL (production)
-- Jest & Supertest
+- SQLite3
+- MySQL
 
 ## API URL
 
@@ -20,7 +19,7 @@ This repository holds all backend files for the FoodieFun application. You can f
 
 Fork/Clone the repository. In the same directory as the package.json, run:
 
-`npm install`
+`npm i`
 
 This will install all packages. To start the server:
 
@@ -58,7 +57,7 @@ To test the repository:
 
 ### **Registers a user**
 
-_Method Url:_ `https://foodiefun-api.herokuapp.com/api/auth/register`
+_Method Url:_ `http://localhost:4949/api/auth/register`
 
 _HTTP method:_ **[POST]**
 
@@ -110,9 +109,9 @@ _example:_
 }
 ```
 
-##### 422 (Unprocessable Entity)
+##### 455 (Unprocessable Entity)
 
-> If the username already exists, the endpoint will return an HTTP response with a status code `422` and a body as below.
+> If the username already exists, the endpoint will return an HTTP response with a status code `455` and a body as below.
 
 ```
 {
@@ -225,10 +224,10 @@ _HTTP method:_ **[POST]**
 
 #### Body
 
-| name       | type   | required | description    |
-| ---------- | ------ | -------- | -------------- |
-| `username` | String | Yes      | Must be unique |
-| `password` | String | Yes      |                |
+| name       | type   | required | description     |
+| ---------- | ------ | -------- | --------------- |
+| `username` | String | Yes      | Must be unique  |
+| `password` | String | Yes      | Can be whatever |
 
 _example:_
 

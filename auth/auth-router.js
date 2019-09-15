@@ -16,7 +16,7 @@ router.post('/register', (req, res) => {
 		.catch((error) => {
 			res.status(500).json(error)
 		})
-})
+}) //Tested & working
 
 /* ------------------------- api/auth/login endpoint ------------------------ */
 router.post('/login', (req, res) => {
@@ -38,13 +38,13 @@ router.post('/login', (req, res) => {
 		.catch((error) => {
 			res.status(500).json(error)
 		})
-})
+}) //Tested & working
 
 /* ------------------------ api/auth/logout endpoint ------------------------ */
 router.get('/logout', (req, res) => {
 	req.session.destroy(() => {
 		res.status(200).json({ SAD: 'Goodbye Jack!' })
 	})
-})
+}) //Tested & working
 
 module.exports = router
