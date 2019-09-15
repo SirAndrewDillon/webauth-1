@@ -1,3 +1,5 @@
+![](andy.jpg)
+
 # Authentication Project
 
 # Overview
