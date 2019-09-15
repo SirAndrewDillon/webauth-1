@@ -1,3 +1,5 @@
+/* -------------------- Helps create seeds amd migrations ------------------- */
+
 module.exports = {
 	development: {
 		client: 'sqlite3',
