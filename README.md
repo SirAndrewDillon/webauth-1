@@ -1,6 +1,6 @@
 ![](andy.jpg)
 
-# Authentication Project
+# Authentication Project Andrew Dillon
 
 # Overview
 
