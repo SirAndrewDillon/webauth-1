@@ -1,9 +1,13 @@
 /* --------------------- function for restricted routes --------------------- */
 
 module.exports = (req, res, next) => {
-	if (req.session && req.session.loggedIn) {
-		next()
-	} else {
-		res.status(401).json({ message: 'You are who you claim to be!' })
+	try {
+		if (req && req.session && req.session.user) {
+			next()
+		} else {
+			res.status(401).json({ message: 'You shall not pass!' })
+		}
+	} catch (error) {
+		res.status(500).json({ message: 'Broken!' })
 	}
 }

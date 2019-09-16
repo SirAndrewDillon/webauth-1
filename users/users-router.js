@@ -8,7 +8,9 @@ router.get('/', restricted, (req, res) => {
 		.then((users) => {
 			res.json(users)
 		})
-		.catch((err) => res.send(err))
+		.catch((err) => {
+			res.status(500).json(err)
+		})
 })
 
 module.exports = router
