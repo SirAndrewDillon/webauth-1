@@ -16,6 +16,7 @@ class Register extends Component {
 	}
 
 	createUser = (e) => {
+		this.props.history.push('/login')
 		e.preventDefault()
 		if (this.state.username !== '' || this.state.password !== '') {
 			axios

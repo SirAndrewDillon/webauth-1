@@ -16,13 +16,14 @@ class Login extends Component {
 	}
 
 	login = (e) => {
+		this.props.history.push('/')
 		e.preventDefault()
 		if (this.state.username !== '' || this.state.password !== '') {
 			axios
 				.post('http://localhost:4949/api/auth/login', this.state)
 				.then((res) => {
 					console.log(res)
-					this.props.loggedIn = true
+					// this.props.loggedIn = true
 				})
 				.catch((err) => console.log(err))
 		}
